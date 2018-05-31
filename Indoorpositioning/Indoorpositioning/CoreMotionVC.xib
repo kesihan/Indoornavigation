@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CoreMotionVC">
+            <connections>
+                <outlet property="LABEL" destination="HqP-vi-vvY" id="oof-Rt-lxB"/>
+                <outlet property="backview" destination="IfN-9D-Kqy" id="zep-cK-Z1r"/>
+                <outlet property="map" destination="26a-xM-Ynm" id="gn0-SK-dtq"/>
+                <outlet property="scrollview" destination="dbd-RP-ijN" id="jVu-QK-fOM"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HqP-vi-vvY">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dbd-RP-ijN">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IfN-9D-Kqy">
+                            <rect key="frame" x="0.0" y="0.0" width="1000" height="667"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="map" translatesAutoresizingMaskIntoConstraints="NO" id="26a-xM-Ynm">
+                                    <rect key="frame" x="0.0" y="30" width="1000" height="637"/>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCH-0A-7am">
+                                    <rect key="frame" x="30" y="30" width="60" height="30"/>
+                                    <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="St4-gy-aVr"/>
+                                        <constraint firstAttribute="width" constant="60" id="t51-Mr-anu"/>
+                                    </constraints>
+                                    <state key="normal" title="开始">
+                                        <color key="titleColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="start:" destination="-1" eventType="touchUpInside" id="6pY-eh-EeU"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="UCH-0A-7am" firstAttribute="leading" secondItem="IfN-9D-Kqy" secondAttribute="leading" constant="30" id="1tP-Za-zkC"/>
+                                <constraint firstAttribute="trailing" secondItem="26a-xM-Ynm" secondAttribute="trailing" id="GXg-ws-k9P"/>
+                                <constraint firstItem="26a-xM-Ynm" firstAttribute="top" secondItem="IfN-9D-Kqy" secondAttribute="top" constant="30" id="JP4-CZ-sdm"/>
+                                <constraint firstAttribute="width" constant="1000" id="RG3-Ry-H6G"/>
+                                <constraint firstAttribute="height" constant="667" id="UWF-vi-u9W"/>
+                                <constraint firstItem="26a-xM-Ynm" firstAttribute="leading" secondItem="IfN-9D-Kqy" secondAttribute="leading" id="fX5-Fm-ncV"/>
+                                <constraint firstItem="UCH-0A-7am" firstAttribute="top" secondItem="IfN-9D-Kqy" secondAttribute="top" constant="30" id="ghH-Xo-zkg"/>
+                                <constraint firstAttribute="bottom" secondItem="26a-xM-Ynm" secondAttribute="bottom" id="nuW-ks-e4i"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="IfN-9D-Kqy" secondAttribute="trailing" id="FUH-Ce-ja4"/>
+                        <constraint firstItem="IfN-9D-Kqy" firstAttribute="leading" secondItem="dbd-RP-ijN" secondAttribute="leading" id="UhW-tB-ran"/>
+                        <constraint firstAttribute="bottom" secondItem="IfN-9D-Kqy" secondAttribute="bottom" id="gu4-yX-Fep"/>
+                        <constraint firstItem="IfN-9D-Kqy" firstAttribute="centerY" secondItem="dbd-RP-ijN" secondAttribute="centerY" id="the-a6-wV2"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="HqP-vi-vvY" secondAttribute="trailing" id="0C7-yN-GQB"/>
+                <constraint firstAttribute="bottom" secondItem="HqP-vi-vvY" secondAttribute="bottom" id="3kf-1D-HbP"/>
+                <constraint firstItem="HqP-vi-vvY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4ab-hI-h8I"/>
+                <constraint firstItem="dbd-RP-ijN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6Le-MN-2OB"/>
+                <constraint firstAttribute="bottom" secondItem="dbd-RP-ijN" secondAttribute="bottom" id="fX9-8S-FMF"/>
+                <constraint firstAttribute="trailing" secondItem="dbd-RP-ijN" secondAttribute="trailing" id="gSf-3u-j1p"/>
+                <constraint firstItem="HqP-vi-vvY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ylY-vk-Qht"/>
+                <constraint firstItem="dbd-RP-ijN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="yvW-Ec-uQt"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="map" width="6052" height="2954"/>
+    </resources>
+</document>
